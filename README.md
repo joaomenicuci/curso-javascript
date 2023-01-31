@@ -1,2 +1,2 @@
 # curso-javascript
- Curso de Javascript
+ Curso de JavaScript de 40 horas
