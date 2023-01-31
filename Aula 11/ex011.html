@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identificador de Nacionalidade</title>
+    <style>
+        body{
+            font: normal 16pt Arial
+        }
+    </style>
+</head>
+<body>
+    <h1>Identificador de Nacionalidade</h1>
+    País de Origem: <input type="text" name="pais" id="pais">
+    <input type="button" value="Identificar" onclick="checar()">
+    <div id="res"></div>
+    <script>
+        function checar(){
+            var tpais = window.document.getElementById('pais')
+            var res = window.document.getElementById('res')
+            var pais = tpais.value
+            res.innerHTML = `<p>O seu país de origem é ${pais}.</p>`
+            if(pais == 'Brasil'){
+                res.innerHTML += `<p>Você é mais um brasileiro!</p>`
+            } else{
+                res.innerHTML += `<p>Você é um estrangeiro em nosso país!</p>`
+                res.innerHTML += `<p>Bem vindo ao Brasil!</p>`
+            }
+        }
+    </script>
+</body>
+</html>
